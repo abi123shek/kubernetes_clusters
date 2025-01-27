@@ -6,16 +6,24 @@ apiVersion: kind.x-k8s.io/v1alpha4
 
 nodes:
 - role: control-plane
-  image: kindest/node:v1.16.4@sha256:b91a2c2317a000f3a783489dfb755064177dbc3a0b2f4147d50f04825d016f55
+  image: kindest/node:v1.16.4
 
 - role: worker
-    image: kindest/node:v1.16.4@sha256:b91a2c2317a000f3a783489dfb755064177dbc3a0b2f4147d50f04825d016f55
+  image: kindest/node:v1.16.4
 
-    extraPortMappings:
-    - containerPort: 80
-      hostPort: 80
-      protocol: TCP
+- role: worker
+  image: kindest/node:v1.16.4
 
-    - containerPort: 443
-      hostPort: 443
-      protocol: TCP
+- role: worker
+  image: kindest/node:v1.16.4
+  extraPortMappings:
+  - containerPort: 80
+    hostPort: 80
+    protocol: TCP
+  - containerPort: 443
+    hostPort: 443
+    protocol: TCP
+
+
+#how to run after creating config_kind file
+use cmd: kind create cluster --name=devcluster(your_cluster_name) --config=config.yml
