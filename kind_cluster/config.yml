@@ -23,3 +23,4 @@ nodes:
 
 
 #how to run after creating config_kind file use cmd: kind create cluster --name=devcluster(your_cluster_name) --config=config.yml
+  #set kind cluster to run by default if not running: kubectl config use-context kind-abi-cluster (here use your cluster name which is used while configuring)
