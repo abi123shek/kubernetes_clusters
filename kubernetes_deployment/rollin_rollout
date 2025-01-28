@@ -1,2 +1,3 @@
 # Set a deployment's nginx container image to 'nginx:1.9.1', and its busybox container image to 'busybox'
-  kubectl set image deployment/nginx busybox=busybox nginx=nginx:1.9.1
+  cmd:kubectl set image deployment/my-deployment -n ownserver own-nginx=nginx:1.9.1
+#here deployment means your deployment.yml file/ my deployment means yml metadata name own-nginx means pods container name
