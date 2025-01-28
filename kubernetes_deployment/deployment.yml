@@ -1,0 +1,26 @@
+#create your deployment.yml file
+kind: Deployment
+apiVersion: app/v1
+metadata:
+  name: my-deployment
+  namespace: ownserver
+  labels:
+    app: my-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-nginx
+
+  template:
+    metadata:
+      labels:
+        app: my-nginx
+    spec:
+      containers:
+      - name: own-nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+
+     #here enter your own name to all of the things ensure that namespace is similar in which you want run your deployment
