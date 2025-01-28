@@ -1,0 +1,12 @@
+#write namespace file using yml
+#note create this file with name namespace.yml
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: ownserver
+
+#here name is your custom namespace whatever you want to place
+#how to run this file 
+#usecmd: kubectl apply -f namespace.yml 
+#here f represent filename
+#here apply means it will create and update to control plane
