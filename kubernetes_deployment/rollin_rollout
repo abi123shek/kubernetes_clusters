@@ -1,0 +1,2 @@
+# Set a deployment's nginx container image to 'nginx:1.9.1', and its busybox container image to 'busybox'
+  kubectl set image deployment/nginx busybox=busybox nginx=nginx:1.9.1
