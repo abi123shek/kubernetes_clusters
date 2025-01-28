@@ -1,3 +1,8 @@
 # Set a deployment's nginx container image to 'nginx:1.9.1', and its busybox container image to 'busybox'
   cmd:kubectl set image deployment/my-deployment -n ownserver own-nginx=nginx:1.9.1
 #here deployment means your deployment.yml file/ my deployment means yml metadata name own-nginx means pods container name
+
+#here question arries how to rollin and rollout then 
+#if you need to roll in to older version then use:kubectl set image deployment/my-deployment -n ownserver own-nginx=nginx:1.9.1
+#if you need to roll out in latest version the use:kubectl set image deployment/my-deployment -n ownserver own-nginx=nginx:latest
+
