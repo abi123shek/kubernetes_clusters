@@ -1,0 +1,18 @@
+#how to check namespace in kubernetes
+cmd:kubectl get namespace
+or use 
+cmd: kubectl get ns
+
+#how to create namespaces
+use cmd:kubectl create ns server
+
+#how to create pods under particular name space
+use cmd:kubectl run nginx --image=nginx -n server
+
+#how to find that particular namespace is working or not
+use cmd:kubectl get pods -n server
+
+#how to delete pods
+use cmd: kubectl delete pod nginx -n server
+
+
