@@ -26,7 +26,7 @@ spec:
         - mountPath: /var/www/html
           name: my-storage
       volumes:
-         -name: my-vol
+         -name: my-storage
           persistentVolumeClaim:
               claimName: my-pvc
 
