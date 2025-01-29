@@ -15,3 +15,4 @@ spec:
 
   #here storageClassName should be similar to persistent volume storageclass to boud the status
   #to run this use cmd:kubectl apply -f PersistentVolumeClaim.yml
+ #delete pvc use cmd:kubectl delete pvc/my-pvc (my pvc must be replace with your own metadata name )
