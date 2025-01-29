@@ -9,3 +9,37 @@
 
 
 for that all we need to do is to create yml file 
+
+## frist of all create machine
+you can create machine either in local or in cloud for now i am using aws instance to create this project
+
+### update your machine 
+must update your ubuntu machine using cmd: sudo apt-get update
+
+#### install docker
+use cmd: sudo apt-get install docker.io
+
+##### install kubernetes using install.sh file 
+
+##### config kind cluster using kind_config.yml file
+
+##### create cluster using yml file  
+how to run after creating kind_config file use cmd: kind create cluster --name=devcluster(your_cluster_name) --config=kind_config.yml
+
+### create namespace
+how to run after creating namespace file use cmd: kubectl apply -f ns (your name space)
+
+#### create pod using yml file
+how to run after creating pod.yml file use cmd: kubectl apply -f pod.yml ns (your namespace) 
+
+## create deployment file
+how to run after creating deployment.yml file use cmd: kubectl apply -f deployment.yml 
+
+## create persistent volume
+
+## create persistent volume claim
+
+
+
+
+
