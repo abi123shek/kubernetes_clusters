@@ -19,6 +19,16 @@ must update your ubuntu machine using cmd: sudo apt-get update
 #### install docker
 use cmd: sudo apt-get install docker.io
 
+Create the docker group if it does not exist:
+use cmd:sudo groupadd docker
+
+Add your user to the docker group:
+use cmd:sudo usermod -aG docker $USER
+
+Log in to the new docker group
+use cmd:newgrp docker
+
+
 ##### install kubernetes using install.sh file 
 
 ##### config kind cluster using kind_config.yml file
