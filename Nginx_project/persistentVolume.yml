@@ -25,3 +25,4 @@ spec:
 
     #use cmd to run this code: kubectl apply -f persistentVolume.yml
     #use cmd to see pv: kubectl get pv
+   
