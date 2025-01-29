@@ -1,6 +1,6 @@
 #create your deployment.yml file
 kind: Deployment
-apiVersion: app/v1
+apiVersion: apps/v1
 metadata:
   name: my-deployment
   namespace: ownserver
