@@ -4,6 +4,8 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: my-storage
+  namespace: my-nginx-server
+  #here add your own namespace
   labels:
     app: ownstorage
 
