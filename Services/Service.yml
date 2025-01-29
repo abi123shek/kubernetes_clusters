@@ -1,0 +1,18 @@
+#this is service file from where outside user can interact or in simple word we can browse or deployed application on browser
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-nginx
+  namespace: myserver
+
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+
+  #here rename namespace with your ones 
+  #define name whatever you want to write
