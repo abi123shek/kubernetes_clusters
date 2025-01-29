@@ -1,0 +1,24 @@
+#allocation from local machine to store data for pods
+
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: my-storage
+  labels:
+    app: ownstorage
+
+spec:
+  #define how much storage capacity you want to give
+
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: my-pv
+  hostPath:
+    path: /mnt/data
+
+    #describe your path where you want to allocate your storage
+
+    #use cmd to run this code: kubectl apply -f persistentVolume.yml
