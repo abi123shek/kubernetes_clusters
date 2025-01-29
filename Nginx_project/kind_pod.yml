@@ -1,0 +1,21 @@
+#creating pod file
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: ownpod-nginx
+#here in name define your own podname
+  namespace: ownserver
+spec:
+ containers:
+  - name: mynginx
+  #here in  name define your own container name
+    image: nginx:latest
+    #here define your image which is pulled from dockerhub 
+    ports:
+    - containerPort: 80
+    #here expose your pods in which port you want to run it
+
+  #how to enter in specfic pod for that use cmd
+  #kubectl exec -it ownpod-nginx -n ownserver -- bash
+  # curl 127.0.0.1 this will give you nginx server welecome message print
+  #how to check full info use cmd:kubectl describe pod/ownpod-nginx -n ownserver
