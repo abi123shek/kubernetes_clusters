@@ -1,0 +1,17 @@
+#this is for claiming the volume from persistent volume
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: my-pvc
+  namespace: my-nginx-server
+  #replace with your namespace
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: my-pv
+
+  #here storageClassName should be similar to persistent volume storageclass to boud the status
+  #to run this use cmd:kubectl apply -f PersistentVolumeClaim.yml
