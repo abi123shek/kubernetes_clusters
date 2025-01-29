@@ -22,5 +22,14 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: /var/www/html
+          name: my-storage
+      volumes:
+         -name: my-vol
+          persistentVolumeClaim:
+              claimName: my-pvc
 
+      #here claim name should be your metadata name of persistentvolumeclaim 
      #here enter your own name to all of the things ensure that namespace is similar in which you want run your deployment
+    #here defining volume path to store data when if the pods get delete 
