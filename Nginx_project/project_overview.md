@@ -1,7 +1,7 @@
 # Here in this project i am going to demonstrate from basic of all the thing like 
 
 1.creating a kubernetes cluster (using kind cluster method)
-4.creating namespace
+2.creating namespace
 3.creating pods
 4. persistent volume
 5 persistent volume claim
