@@ -46,10 +46,18 @@ how to run after creating pod.yml file use cmd: kubectl apply -f pod.yml ns (you
 how to run after creating deployment.yml file use cmd: kubectl apply -f deployment.yml 
 
 ## create persistent volume
+how to run after creating presistentVolume.yml file use cmd: kubectl apply -f PresistentVolume.yml
+
 
 ## create persistent volume claim
+how to run after creating presistentVolumeClaim.yml file use cmd: kubectl apply -f presistentVolumeClaim.yml
 
+### After ensuring all this  thing we need to port forward to access from web browser
+kubectl port-forward service/nginx-service -n my-nginx-server 81:80 --address=0.0.0.0
 
+*here write your servicename which is present in your service.yml file 
+*ensure that all the service are running properly or not for that use cmd: kubectl get all -n (your namespace)
+*if port 80:80 is not working then bind your port with another and bind address with any ip
 
 
 
