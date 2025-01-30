@@ -1,4 +1,5 @@
-# Frist you need to have a image
+# Build Your ToDo APP Using Node app
+### Frist you need to have a image
 Step 1: clone github project or have docker image 
 Step 2: create namespace.yml file and run it using cmd:kubectl apply -f namespace.yml
 step 3: create deployment.yml file and run it using cmd:kubectl apply -f deployment.yml
